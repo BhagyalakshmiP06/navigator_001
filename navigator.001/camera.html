@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Navigator - Camera Mock</title>
+    <style>
+        body { text-align: center; font-family: Arial; }
+        img { 
+            width: 90%; 
+            margin-top: 20px; 
+            border: 2px solid black; 
+            border-radius: 10px;
+        }
+        button { 
+            margin-top:20px; 
+            padding:10px 20px; 
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Camera Preview (Mock Image)</h2>
+
+<!-- This is only an image, NOT camera -->
+<img src="dummy_cam.jpg" alt="Camera Mock Image">
+
+<button onclick="go()">Start Navigation</button>
+
+<script>
+    function go() {
+        window.location.href = "navigation.html";
+    }
+</script>
+
+</body>
+</html>

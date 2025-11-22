@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation</title>
+    <style>
+        /* Container for the image and arrow */
+        #container {
+            position: relative;
+            width: 600px;
+            margin-top: 20px;
+        }
+
+        #campusImage {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #arrow {
+            position: absolute;
+            top: 0px; 
+            left: 0px; 
+            font-size: 50px;
+            transition: top 0.5s, left 0.5s; /* Smooth movement */
+        }
+
+        /* Optional building labels */
+        .label {
+            position: absolute;
+            background: yellow;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Navigation Page</h2>
+
+<!-- Building selection buttons -->
+<h3>Select Location:</h3>
+<button onclick="moveArrow(150, 50)">Library</button>
+<button onclick="moveArrow(300, 200)">CSE Block</button>
+<button onclick="moveArrow(450, 100)">Admin Block</button>
+
+<!-- Image container with arrow and optional labels -->
+<div id="container">
+    <img id="campusImage" src="images/campus.jpg">
+
+    <!-- Arrow -->
+    <div id="arrow">➡️</div>
+
+    <!-- Optional building labels on image -->
+    <div class="label" style="top:40px; left:150px;">Library</div>
+    <div class="label" style="top:210px; left:300px;">CSE Block</div>
+    <div class="label" style="top:110px; left:450px;">Admin Block</div>
+</div>
+
+<script>
+    // Function to move arrow to specific location
+    function moveArrow(left, top) {
+        const arrow = document.getElementById("arrow");
+        arrow.style.left = left + "px";
+        arrow.style.top = top + "px";
+    }
+</script>
+
+</body>
+</html>
